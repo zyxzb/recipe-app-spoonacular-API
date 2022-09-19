@@ -19,7 +19,7 @@ const Category = () => {
                 <GiNoodles/>
                 <h4>Thai</h4>
             </NavLink>
-            <NavLink to={'/cuisine/german'}> 
+            <NavLink to={'/cuisine/german'}>
                 <GiSausage/>
                 <h4>German</h4>
             </NavLink>
@@ -33,6 +33,7 @@ const CategoryWrapper = styled.div `
     max-width: 50%;
     justify-content: space-around;
     margin: 0 auto;
+
     a {
         display: flex;
         justify-content: center;
@@ -43,15 +44,19 @@ const CategoryWrapper = styled.div `
         background-color: #2f2f2fa5;
         color: white;
         border-radius: 50%;
+
+         &.active{
+        background: black;
+    }
         svg{
             font-size: 20px;
         }
         h4{
             font-size: 9px;
+            margin-top: 5px;
         }
     }
 
 `
-
 
 export default Category;

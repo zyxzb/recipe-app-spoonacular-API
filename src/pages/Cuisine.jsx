@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {Link, useParams} from 'react-router-dom';
-import Category from '../components/Category';
+// import Category from '../components/Category';
+// import Search from '../components/Search';
 
 const Cuisine = ({name}) => {
     const [cuisine,
@@ -24,7 +25,8 @@ const Cuisine = ({name}) => {
     return (
         <div>
             <h1>Cuisine Page</h1>
-            <Category/>
+            {/* <Search/> */}
+            {/* <Category/> */}
             <Grid>
                 {cuisine.map((item) => (
                     <Card key={item.id}>

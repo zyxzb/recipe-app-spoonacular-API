@@ -63,6 +63,13 @@ const Card = styled.div `
     border-radius: 1rem;
     overflow: hidden;
     
+    &:hover{
+        p{
+             background-color: #131313;
+             transition: 0.2s;
+        }
+    }
+    
 
     p{
        padding: 0;

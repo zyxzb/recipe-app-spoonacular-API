@@ -67,6 +67,12 @@ const Card = styled.div `
     border-radius: 2rem;
     overflow: hidden;
     
+    &:hover{
+        p{
+             background-color: #131313;
+             transition: 0.2s;
+        }
+    }
 
     p{
        padding: 0;
@@ -83,7 +89,7 @@ const Card = styled.div `
         color: white;
 
     }
-    
+
 
     img{
         margin: 0 auto;
@@ -91,7 +97,7 @@ const Card = styled.div `
         width: 100%;
         height: 100%;
         object-fit: cover;
-       
+        
     }
 
 
