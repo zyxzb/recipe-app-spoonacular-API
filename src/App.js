@@ -2,6 +2,7 @@ import Pages from "./pages/Pages";
 import Category from './components/Category';
 import Search from './components/Search';
 import NavLogo from "./components/NavLogo";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Search/>
         <Category/>
         <Pages/>
+        <Footer/>
     </div>
   );
 }
