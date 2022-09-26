@@ -2,19 +2,15 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {Link, useParams} from 'react-router-dom';
-// import Category from '../components/Category';
-// import Search from '../components/Search';
 
 const Cuisine = ({name}) => {
-    const [cuisine,
-        setCuisine] = useState([]);
+    const [cuisine, setCuisine] = useState([]);
     let params = useParams();
 
     const getCuisine = async(name) => {
         const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
         const recipes = await data.json();
         setCuisine(recipes.results);
-        console.log(cuisine);
     }
 
     useEffect(() => {
@@ -25,13 +21,13 @@ const Cuisine = ({name}) => {
     return (
         <div>
             <h1>Cuisine Page</h1>
-            {/* <Search/> */}
-            {/* <Category/> */}
             <Grid>
                 {cuisine.map((item) => (
                     <Card key={item.id}>
+                        <Link to={'/recipe/'+ item.id}>
                         <h4>{item.title}</h4>
                         <img src={item.image} alt={item.title}/>
+                        </Link>
                     </Card>
                 ))}
             </Grid>
@@ -59,6 +55,7 @@ const Card = styled.div `
     h4{
          text-align: center;
          padding: 0.5rem;
+         color: black;
         }
     `
 

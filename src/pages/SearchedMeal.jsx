@@ -1,8 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-
-
+import { Link } from 'react-router-dom';
 
 const SearchedMeal = () => {
     const [searchedMeals, setSearchedMeals] = useState([]);
@@ -21,13 +20,15 @@ const SearchedMeal = () => {
 
     return (
         <Grid>
-                {searchedMeals.map((item) => (
-                    <Card key={item.id}>
-                        <h4>{item.title}</h4>
-                        <img src={item.image} alt={item.title}/>
-                    </Card>
+            {searchedMeals.map((item) => (
+                <Card key={item.id}>
+                    <Link to={'/recipe/'+ item.id}>
+                    <h4>{item.title}</h4>
+                    <img src={item.image} alt={item.title}/>
+                    </Link>
+                </Card>
                 ))}
-            </Grid>
+         </Grid>
     );
 }
 
@@ -50,8 +51,9 @@ const Card = styled.div `
         }
 
     h4{
-         text-align: center;
-         padding: 0.5rem;
+        color: black;
+        text-align: center;
+        padding: 0.5rem;
         }
     `
 
