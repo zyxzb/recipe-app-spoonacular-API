@@ -37,7 +37,7 @@ const Trending = () => {
                 <h3>Popular Picks 🔥</h3>
                 <Splide
                     options={{
-                    perPage: 4,
+                    fixedWidth : '20rem',
                     gap: '3rem',
                     drag: "free",
                     pagination: false

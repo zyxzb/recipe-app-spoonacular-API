@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const SearchedMeal = () => {
     const [searchedMeals, setSearchedMeals] = useState([]);
@@ -32,7 +33,7 @@ const SearchedMeal = () => {
     );
 }
 
-const Grid = styled.div `
+const Grid = styled(motion.div)`
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

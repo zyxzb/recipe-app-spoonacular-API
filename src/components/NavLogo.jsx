@@ -20,6 +20,9 @@ const NavElement = styled.nav `
     width: 100%;
     justify-content: flex-start;
     border-bottom: 1px solid lightgray;
+    @media (max-width: 576px) {
+        padding-left: 1rem;
+    }
 
     img{
         height: 100%;

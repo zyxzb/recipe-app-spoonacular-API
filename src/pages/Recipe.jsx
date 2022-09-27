@@ -55,12 +55,18 @@ const Recipe = () => {
 }
 
 const DetailsWrapper = styled.div`
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin: 10rem 1rem 5rem;
     display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
 
 div:first-child{
     width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 h2{
@@ -69,7 +75,10 @@ h2{
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
+    @media (max-width: 768px) {
+        object-fit: cover;
+    }
 }
       
     
@@ -77,8 +86,17 @@ img{
 
 const Info = styled.div`
     margin: 0 auto;
+    margin-left: 1rem;
     width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+    }
 
+@keyframes textAppear {
+        0% { opacity: 0;}
+        100% { opacity: 1; }
+    }
 
 button{
     margin-right: 2rem;
@@ -89,7 +107,16 @@ button{
     border: 2px solid gray;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
-    width: 160px;
+    width: 150px;
+    @media (max-width: 768px) {
+        width: max-content;
+        font-size: 0.7rem;
+        margin: 2rem 0 1rem 1rem;
+        &:first-of-type{
+            margin-left: 0;
+        } 
+        
+    }
 
     &.active {
         background-color: gray;
@@ -100,6 +127,19 @@ button{
 h3{
     text-align: justify;
     line-height: 1.5rem;
+
+}
+
+ul{
+    font-weight: bold;
+    list-style-type: "🥄"; 
+    li{
+        margin-bottom: 0.5rem;
+    }
+}
+
+h3, ul{
+    animation: textAppear 0.6s ease-in-out;
 }
 
 `
