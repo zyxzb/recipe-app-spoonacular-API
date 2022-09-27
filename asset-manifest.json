@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/recipe-app-spoonacular-API/static/css/main.18f48d4c.css",
+    "main.js": "/recipe-app-spoonacular-API/static/js/main.4f4a044d.js",
+    "static/media/logo.png": "/recipe-app-spoonacular-API/static/media/logo.f5c52c826c3b79b68bcf.png",
+    "index.html": "/recipe-app-spoonacular-API/index.html",
+    "main.18f48d4c.css.map": "/recipe-app-spoonacular-API/static/css/main.18f48d4c.css.map",
+    "main.4f4a044d.js.map": "/recipe-app-spoonacular-API/static/js/main.4f4a044d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18f48d4c.css",
+    "static/js/main.4f4a044d.js"
+  ]
+}
